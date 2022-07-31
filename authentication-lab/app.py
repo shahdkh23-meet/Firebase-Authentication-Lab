@@ -16,7 +16,8 @@ config = {"const firebaseConfig "= {
 
   "appId": "1:572341558806:web:acacd3a8dab8d879fbdf37",
 
-  "measurementId": "G-TQTQ9ZV9CN"
+  "measurementId": "G-TQTQ9ZV9CN",
+  "databaseURL": ""
   } 
 }
 
@@ -56,6 +57,7 @@ def signup():
 @app.route('/add_tweet', methods=['GET', 'POST'])
 def add_tweet():
     return render_template("add_tweet.html")
+
 
 firebase = pyrebase_intialize_app(config)
 auth = firebase.auth()
